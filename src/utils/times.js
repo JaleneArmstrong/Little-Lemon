@@ -1,7 +1,23 @@
+import { fetchAPI } from "../api/mockAPI";
+
 export const updateTimes = (state, action) => {
-  return state;
+  switch (action.type) {
+    case "UPDATE_TIMES":
+      const newTimes = fetchAPI(new Date(action.payload.date));
+      localStorage.setItem("availableTimes", JSON.stringify(newTimes));
+      return newTimes;
+    default:
+      return state;
+  }
 };
 
 export const initializeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const storedTimes = localStorage.getItem("availableTimes");
+  if (storedTimes) {
+    return JSON.parse(storedTimes);
+  }
+
+  const initialTimes = fetchAPI(new Date());
+  localStorage.setItem("availableTimes", JSON.stringify(initialTimes));
+  return initialTimes;
 };

@@ -1,16 +1,10 @@
 import "./Main.css";
 import { useReducer } from "react";
 import HomePage from "./pages/home/HomePage";
-import { Routes, Route, useNavigate } from "react-router-dom";
 import BookingsPage from "./pages/booking/BookingsPage";
 import { updateTimes, initializeTimes } from "../utils/times";
-
-const ConfirmedBooking = () => (
-  <div style={{ padding: "4rem 5%", textAlign: "center" }}>
-    <h1>Booking Confirmed!</h1>
-    <p>Thank you for your reservation. We look forward to seeing you!</p>
-  </div>
-);
+import { Routes, Route, useNavigate } from "react-router-dom";
+import ConfirmedBooking from "./pages/booking/ConfirmedBooking ";
 
 function Main() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());

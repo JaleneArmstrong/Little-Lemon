@@ -3,14 +3,16 @@ import { useState } from "react";
 
 function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("17:00");
+  const [time, setTime] = useState(
+    availableTimes.length > 0 ? availableTimes[0] : ""
+  );
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
-    dispatch({ type: "UPDATE_TIMES" });
+    dispatch({ type: "UPDATE_TIMES", payload: { date: newDate } });
   };
 
   const handleSubmit = (e) => {
@@ -65,6 +67,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         onChange={(e) => setOccasion(e.target.value)}
       >
         <option>Birthday</option>
+        <option>Engagement</option>
         <option>Anniversary</option>
       </select>
 
