@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assests/Logo.svg";
+import logo from "../../../assests/Logo.svg";
 import "./Nav.css";
 
 function Nav() {
@@ -15,14 +15,17 @@ function Nav() {
         <img src={logo} alt="Little Lemon Logo" />
       </a>
 
-      {/* Hamburger Menu Icon */}
-      <div className="hamburger-menu" onClick={toggleMenu}>
+      <div
+        className="hamburger-menu"
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMenuOpen}
+      >
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
 
-      {/* Navigation Links */}
       <ul className={isMenuOpen ? "nav-links open" : "nav-links"}>
         <li>
           <a href="/">Home</a>
@@ -34,7 +37,7 @@ function Nav() {
           <a href="/menu">Menu</a>
         </li>
         <li>
-          <a href="/reservations">Reservations</a>
+          <a href="/booking">Reservations</a>
         </li>
         <li>
           <a href="/order-online">Order Online</a>

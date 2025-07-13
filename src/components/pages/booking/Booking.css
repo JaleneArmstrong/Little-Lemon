@@ -1,0 +1,78 @@
+.booking-page {
+  padding: 4rem 5%;
+  background-color: #edefee;
+}
+
+.booking-page h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: grid;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 25px;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form label {
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #495e57;
+}
+
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #f4ce14;
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.4);
+}
+
+.booking-form button[type="submit"] {
+  background-color: #f4ce14;
+  color: #333333;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  justify-self: center;
+  min-width: 200px;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: #495e57;
+  color: #edefee;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+  .booking-page {
+    padding: 2rem 3%;
+  }
+
+  .booking-form {
+    padding: 1.5rem;
+  }
+}

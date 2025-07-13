@@ -1,13 +1,12 @@
-import React from "react";
-// import logo from "../assets/footer-logo.png";
 import "./Footer.css";
+import logo from "../../../assests/Footer-Logo.png";
 
 function Footer() {
   return (
     <footer className="footer-container">
-      {/* <div className="footer-logo">
+      <div className="footer-logo">
         <img src={logo} alt="Little Lemon - Secondary Logo" />
-      </div> */}
+      </div>
 
       <div className="footer-nav">
         <h4>Doormat Navigation</h4>
@@ -22,7 +21,7 @@ function Footer() {
             <a href="/menu">Menu</a>
           </li>
           <li>
-            <a href="/reservations">Reservations</a>
+            <a href="/booking">Reservations</a>
           </li>
           <li>
             <a href="/order-online">Order Online</a>

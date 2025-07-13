@@ -40,6 +40,14 @@ section {
   gap: 2rem;
 }
 
+ul.specials-cards {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 16px;
@@ -116,6 +124,14 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+}
+
+ul.testimonials-cards {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
 }
 
 .testimonial-card {
