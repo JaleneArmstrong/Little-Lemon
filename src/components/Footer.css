@@ -45,3 +45,17 @@
 address {
   font-style: normal;
 }
+
+@media screen and (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 2rem 8%;
+  }
+
+  .footer-logo,
+  .footer-copyright {
+    text-align: center;
+  }
+}

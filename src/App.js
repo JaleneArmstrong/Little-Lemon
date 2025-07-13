@@ -1,11 +1,15 @@
 import "./App.css";
-import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import Main from "./components/Main";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Nav />
+      <Header />
+      <Main />
       <Footer />
     </>
   );
